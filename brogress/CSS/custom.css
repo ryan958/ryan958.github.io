@@ -27,15 +27,23 @@ body {
 .navbar .navbar-nav > .active > a:focus {
   color: #ed9317;
 }
-.navbar-social-buttons {
-  padding-top: 50px;
+.navbar .navbar-nav .navbar-social {
+  padding-top: 10;
+  padding-left: 5;
+}
+.fa-reddit {
+  color: #185E99;
+}
+.fa-reddit:hover {
+  color: #ed9317;
 }
 .jumbotron {
   position: relative;
    background-color: #185E99;
    height: 50%;
    text-align: center;
-   padding-top: 6%;
+   padding-top: 7%;
+   padding-bottom: 20%;
 }
 .jumbotron h1{
   color: #FFFFFF;
