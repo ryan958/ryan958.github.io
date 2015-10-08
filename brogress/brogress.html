@@ -14,6 +14,13 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="CSS/bootstrap-social.css" rel="stylesheet">
     <script src="JS/ie-emulation-modes-warning.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script type="text/javacript">
+    $(document).ready(function(){
+      $("#TandC").load("Assets/TandC.txt");
+    });
+    </script>
   </head>
 
   <body role=document>
@@ -30,23 +37,14 @@
               <img src="Assets/Logo2.png" style="max-width:200px; margin-top:-27px"></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
-            <div class="navbar-social-buttons>"
-            <ul class="nav navbar-nav navbar-center">
-              <li><a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a></li>
-            </ul>
-          </div>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#login">Login</a></li>
               <li><a href="#signup">Sign Up</a></li>
               <li><a href="#explore">Explore</a></li>
               <li><a href="#contact">Contact Us</a></li>
-<<<<<<< HEAD
                 <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook" style="vertical-align: middle;"></i></a></li>
                 <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a></li>
-                <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-reddit"><i class="fa fa-reddit" style="font-color: black;"></i></a></li>
-                <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram" style="font-color: black;"></i></a></li>
-=======
->>>>>>> parent of 436fa6e... Social icons and jumbotron change
+                <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-reddit"><i class="fa fa-reddit"></i></a></li>
+                <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></a></li>
               <!--<li class="dropdown">
                 <a href="http://getbootstrap.com/examples/theme/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -69,82 +67,144 @@
         <div style="padding-top:10"><p>Fully customisable workouts to get you where you want to be, <b>fast</b></p></div>
       <div style="padding-top:20"><a href="#signup"><button type="button" class="btn btn-custom">Join Free</button></a></div>
       <div><p style="color:white;padding-top:5px;">or login now</h3></div>
-      <div style="background-color: #356FA0;padding-top:10px;">
-        <div class="row col-sm-offset-1 col-sm-10">
-          <div class="col-sm-6">
+      <div style="padding-top:10px;">
+        <div class="row col-sm-offset-3 col-sm-6" >
+          <div class="col-sm-5">
             <div class="form-group">
-              <div>
-              <label for="email" style="color:white;;">Email:</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter email">
+              <label for="email" style="color:white;display:inline-block;">Email:</label>
+              <input style="display:inline-block;width:70%;" type="email" class="form-control" id="email" placeholder="Enter email">
             </div>
-            </div>
-            <div class="checkbox" style="right:10%;padding-right:10%;">
+            <div class="checkbox" style="margin:auto">
               <label style="color:white;"><input type="checkbox"> Remember me</label>
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="form-group" style="padding-right:10px;">
-              <label for="pwd" style="color:white;">Password:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            <div class="form-group">
+              <label for="pwd" style="color:white;display:inline-block;">Password:</label>
+              <input style="display:inline-block;width:60%;" type="password" class="form-control" id="pwd" placeholder="Enter password">
             </div>
-            <a style="color:white;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><u>forgot your password?</u></a>
+            <a style="color:white;margin:auto;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><u>forgot your password?</u></a>
+          </div>
+          <div class="col-sm-1">
+            <button type="button" class="btn btn-custom btn-xs" id="submit">Submit</button>
           </div>
       </div>
     </div>
 
-    <div class="modal fade" id="loginModal" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title" style="margin:0 auto;">Login</h4>
-          </div>
-          <div class="modal-body">
-            <form class="form-inline" role="form">
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email">
-              </div>
-              <div class="form-group">
-                <label for="pwd">Password:</label>
-                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-              </div>
-              <div class="checkbox">
-                <label><input type="checkbox"> Remember me</label>
-              </div>
-              <button type="submit" class="btn btn-custom">Submit</button>
-              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><u>forgot your password?</u></a>
-            </form>
+    <div id="background">
+
+      <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title" style="margin:0 auto;">Login</h4>
+            </div>
+            <div class="modal-body">
+              <form class="form-inline" role="form">
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-custom">Submit</button>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><u>forgot your password?</u></a>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-      <div class="row col-sm-offset-1 col-sm-10">
+      <div class="row col-sm-offset-1 col-sm-10" style="padding-top:5%;">
         <div class="col-sm-4">
           <img src="Assets/Grid-icon-1.svg" class="center-block" width="30%">
-          <p style="padding-top: 10; text-align: center; font-size: 140%">
+          <p style="padding-top: 10; text-align: center; font-size: 140%; color: #000">
             Create custom workouts, with the help of professional consultants, to get you to your fitness goals <i>fast</i>
           </p>
         </div>
         <div class="col-sm-4">
           <img src="Assets/Grid-icon-2.svg" class="center-block" width="30%">
-          <p style="padding-top: 10; text-align: center; font-size: 140%">
+          <p style="padding-top: 10; text-align: center; font-size: 140%; color: #000;">
           Track your progress to see your improvement on a daily basis
           </p>
         </div>
         <div class="col-sm-4">
           <img src="Assets/Grid-icon-3.svg" class="center-block" width="30%">
-          <p style="padding-top: 10; text-align: center; font-size: 140%">
+          <p style="padding-top: 10; text-align: center; font-size: 140%; color: #000;">
             Share your achievements, encouragement, hints and tips with your friends and the whole community
           </p>
         </div>
       </div>
 
-      <hr class="featurette-divider col-sm-offset-1 col-sm-10">
+      <hr class="featurette-divider" style="width:80%;">
+
+      <div id="signup" style="padding-top:25px;">
+        <h1 style="align;color:black;">Get started with Brogress</h1>
+        <h2 style="align;color:black;">It's free. It's awesome.</h2>
+        <div class="row col-sm-offset-3 col-sm-6" style="padding-top:20px;">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <input type="text" style="left:50px;" class="form-control" id="signup-name-first" placeholder="First name">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <input type="text" class="form-control" id="signup-name-last" placeholder="Last name">
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control form-signup" id="signup-email-initial" placeholder="Email adress">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control form-signup" id="signup-email-confirm" placeholder="Confirm email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control form-signup" id="signup-pwd" placeholder="Password">
+          </div>
+          <button type="button" class="btn btn-custom" style="font-size:32px;">Sign up</button>
+          <p style="font-size:16px;color:#999;">
+            By clicking Sign up, you agree to our <a href="#" data-toggle="modal" data-target="#TAndCModal">terms and conditions</a>.
+            You also hereby agree to make sick gains wherever and whenever possible, so that you might earn your seat in the hallowed halls of Swolehalla, Wheymen
+          </p>
+        </div>
+
+      </div>
+
+      <hr class="featurette-divider" style="width:80%;">
+
+      <div id="explore">
+
+      </div>
+
+      <hr class="featurette-divider" style="width:80%;">
+
+      <div id="contact">
+
+      </div>
+
+      <div class="modal fade" id="TAndCModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title" style="margin:0 auto;">Terms and Condition</h4>
+            </div>
+            <div class="modal-body">
+              <div id="TandC"></div>
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="JS/bootstrap.min.js"></script>
-    <i class="fa fa-facebook"></i>
   </body>
 
 </html>
