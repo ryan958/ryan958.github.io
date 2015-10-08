@@ -27,27 +27,24 @@ body {
 .navbar .navbar-nav > .active > a:focus {
   color: #ed9317;
 }
-.navbar .navbar-nav .navbar-social {
-  padding-top: 10;
-  padding-left: 5;
-}
-.fa-reddit {
-  color: #185E99;
-}
-.fa-reddit:hover {
-  color: #ed9317;
+.navbar-social-buttons {
+  padding-top: 50px;
 }
 .jumbotron {
   position: relative;
    background-color: #185E99;
    height: 30%;
    text-align: center;
+<<<<<<< HEAD
    padding-top: 7%;
 }
 @media (min-width: 768px) {
   .jumbotron {
     height: 50%
   }
+=======
+   padding-top: 6%;
+>>>>>>> parent of 436fa6e... Social icons and jumbotron change
 }
 .jumbotron h1{
   color: #FFFFFF;
