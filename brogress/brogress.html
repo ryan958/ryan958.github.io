@@ -38,6 +38,7 @@
                 <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook" style="vertical-align: middle;"></i></a></li>
                 <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a></li>
                 <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-reddit"><i class="fa fa-reddit" style="font-color: black;"></i></a></li>
+                <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram" style="font-color: black;"></i></a></li>
               <!--<li class="dropdown">
                 <a href="http://getbootstrap.com/examples/theme/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -59,7 +60,56 @@
         <h1 style="align">The fitness app for <i>all</i> bros</h1>
         <div style="padding-top:10"><p>Fully customisable workouts to get you where you want to be, <b>fast</b></p></div>
       <div style="padding-top:20"><a href="#signup"><button type="button" class="btn btn-custom">Join Free</button></a></div>
-      <div style="padding-top:10px"></div><a href="#login"><p><u>or login now</u></p></a></div>
+      <div><p style="color:white;padding-top:5px;">or login now</h3></div>
+      <div style="background-color: #356FA0;padding-top:10px;">
+        <div class="row col-sm-offset-1 col-sm-10">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <div>
+              <label for="email" style="color:white;;">Email:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            </div>
+            <div class="checkbox" style="right:10%;padding-right:10%;">
+              <label style="color:white;"><input type="checkbox"> Remember me</label>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group" style="padding-right:10px;">
+              <label for="pwd" style="color:white;">Password:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            </div>
+            <a style="color:white;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><u>forgot your password?</u></a>
+          </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="loginModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" style="margin:0 auto;">Login</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-inline" role="form">
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+              </div>
+              <button type="submit" class="btn btn-custom">Submit</button>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><u>forgot your password?</u></a>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 
       <div class="row col-sm-offset-1 col-sm-10">
@@ -86,6 +136,7 @@
       <hr class="featurette-divider col-sm-offset-1 col-sm-10">
 
     <script src="JS/bootstrap.min.js"></script>
+    <i class="fa fa-facebook"></i>
   </body>
 
 </html>

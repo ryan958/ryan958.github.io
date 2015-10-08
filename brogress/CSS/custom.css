@@ -40,10 +40,14 @@ body {
 .jumbotron {
   position: relative;
    background-color: #185E99;
-   height: 50%;
+   height: 30%;
    text-align: center;
    padding-top: 7%;
-   padding-bottom: 20%;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    height: 50%
+  }
 }
 .jumbotron h1{
   color: #FFFFFF;
