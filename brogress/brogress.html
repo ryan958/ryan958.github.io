@@ -15,15 +15,12 @@
     <link href="CSS/bootstrap-social.css" rel="stylesheet">
     <script src="JS/ie-emulation-modes-warning.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <script type="text/javacript">
-    $(document).ready(function(){
-      $("#TandC").load("Assets/TandC.txt");
-    });
-    </script>
+    <script src="JS/jquery.localscroll.min.js"></script>
+    <script src="JS/smoothscroll.js"></script>
   </head>
 
   <body role=document>
+    <div id="top"></div>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container" id="top">
           <div class="navbar-header">
@@ -33,14 +30,14 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#top" class="smoothscroll">
               <img src="Assets/Logo2.png" style="max-width:200px; margin-top:-27px"></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#signup">Sign Up</a></li>
-              <li><a href="#explore">Explore</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="#signup" class="smoothscroll">Sign Up</a></li>
+              <li><a href="#explore" class="smoothscroll">Explore</a></li>
+              <li><a href="#contact" class="smoothscroll">Contact Us</a></li>
                 <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook" style="vertical-align: middle;"></i></a></li>
                 <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a></li>
                 <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-reddit"><i class="fa fa-reddit"></i></a></li>
@@ -61,8 +58,7 @@
           </div><!--/.nav-collapse -->
         </div>
       </nav>
-    <script src="JS/jquery.min.js"></script>
-    <div class="jumbotron" id="home">
+    <div class="jumbotron">
         <h1 style="align">The fitness app for <i>all</i> bros</h1>
         <div style="padding-top:10"><p>Fully customisable workouts to get you where you want to be, <b>fast</b></p></div>
       <div style="padding-top:20"><a href="#signup"><button type="button" class="btn btn-custom">Join Free</button></a></div>
@@ -92,34 +88,6 @@
     </div>
 
     <div id="background">
-
-      <div class="modal fade" id="loginModal" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title" style="margin:0 auto;">Login</h4>
-            </div>
-            <div class="modal-body">
-              <form class="form-inline" role="form">
-                <div class="form-group">
-                  <label for="email">Email:</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="pwd">Password:</label>
-                  <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox"> Remember me</label>
-                </div>
-                <button type="submit" class="btn btn-custom">Submit</button>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><u>forgot your password?</u></a>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div class="row col-sm-offset-1 col-sm-10" style="padding-top:5%;">
         <div class="col-sm-4">
@@ -192,18 +160,23 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <button type="button" class="close" data-dismiss="modal" style="font-size:30px;">&times;</button>
               <h4 class="modal-title" style="margin:0 auto;">Terms and Condition</h4>
             </div>
             <div class="modal-body">
-              <div id="TandC"></div>
-              </script>
+              <p style="color:black;font-size:14px;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nunc at lobortis fermentum, nisl diam condimentum mauris, ac faucibus lacus dolor eget odio. Praesent ut laoreet mauris. Fusce a ante tincidunt, faucibus libero ac, dapibus nunc. Cras vitae orci leo. Suspendisse sagittis ut lorem sit amet mattis. Pellentesque posuere iaculis risus, ut vulputate tellus elementum non. Donec iaculis pellentesque metus, a pharetra augue tempor in. Maecenas scelerisque et ex in aliquam. Cras sodales laoreet nisl, in tincidunt sapien interdum vel. Donec faucibus, lorem ornare mollis pulvinar, mauris erat gravida metus, id egestas ante tellus eget turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer pulvinar tortor sed lorem feugiat, a facilisis lorem sodales.
+
+                Pellentesque malesuada arcu facilisis libero scelerisque gravida. Donec eleifend accumsan aliquet. Vestibulum eu lobortis sem. Morbi et purus ante. Nullam rutrum lacus non neque fringilla accumsan. Integer vitae elit metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum in dui magna. Integer feugiat nec ligula sit amet commodo. Donec ante dolor, tincidunt ac ligula et, feugiat vestibulum tellus. Nam id lectus ut orci pulvinar ultricies nec vitae lectus. Nulla lacinia dapibus quam, consequat congue metus ultricies nec.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn" data-dismiss="modal" style="float:right;font-size:16px;align:auto;">close</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <script src="JS/bootstrap.min.js"></script>
   </body>
 
