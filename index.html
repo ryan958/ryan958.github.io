@@ -26,7 +26,7 @@
     } else {
       var height;
       if ($('input[name="heightUnits"]:checked').val() == "inches") {
-        height = $('[name="height"]').val() * 0.393701;
+        height = $('[name="height"]').val() / 0.393701;
       } else {
         height = $('[name="height"]').val();
       }
@@ -40,6 +40,10 @@
       var bodyfat = $('[name="bodyfat"]').val();
       varsSet++;
     }
+
+
+
+    $('#lbm').text("Your lean body mass is " + weight*((100-bodyfat)/100) + " kilos");
 
     if (varsSet == 3) {
       var brodex = Math.round((((weight*((100-bodyfat)/100))/height)*100)*10)/10;
@@ -94,11 +98,12 @@
       <input type="radio" name="weightUnits" value="pounds">pounds<br>
       <input type="number" name="height" placeholder="Height" style="width:60px;">
       <input type="radio" name="heightUnits" value="centimeters" checked>centimeters
-      <input type="radio" name="weightUnits" value="inches">inches<br>
+      <input type="radio" name="heightUnits" value="inches">inches<br>
       <input type="number" name="bodyfat" placeholder="Body fat %" style="width:100px;"><br>
       <input type="button" value="Submit" onclick="calcBrodex();">
     </form>
     <div id="result" style="display:none;">
+      <p id="lbm"></p>
       <p id="result1"></p>
       <p id="result2"></p>
     </div>
