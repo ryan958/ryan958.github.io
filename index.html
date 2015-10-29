@@ -13,7 +13,7 @@
     } else {
       var weight;
       if ($('input[name="weightUnits"]:checked').val() == "pounds") {
-        weight = $('[name="weight"]').val() * 2.20462;
+        weight = $('[name="weight"]').val() / 2.20462;
       } else {
         weight = $('[name="weight"]').val();
       }
@@ -68,6 +68,7 @@
             resultDirection = relativeResult + "% more than";
           }
         }
+
       $('#result2').text("That's " + resultDirection + " the average adult " + gender + "");
     }
   }
