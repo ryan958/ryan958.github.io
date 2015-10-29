@@ -17,9 +17,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="JS/jquery.localscroll.min.js"></script>
     <script src="JS/smoothscroll.js"></script>
+    <script src="JS/custom.js"></script>
   </head>
 
-  <body role=document>
+  <body role=document onload="onpageLoad();">
     <div id="top"></div>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container" id="top">
@@ -38,10 +39,10 @@
               <li><a href="#signup" class="smoothscroll">Sign Up</a></li>
               <li><a href="#explore" class="smoothscroll">Explore</a></li>
               <li><a href="#contact" class="smoothscroll">Contact Us</a></li>
-                <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook" style="vertical-align: middle;"></i></a></li>
-                <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a></li>
-                <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-reddit"><i class="fa fa-reddit"></i></a></li>
-                <li class="nav navbar-nav navbar-social"><a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></a></li>
+                <li class="nav navbar-nav navbar-social"><a href="https://www.facebook.com/" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook" style="vertical-align: middle;"></i></a></li>
+                <li class="nav navbar-nav navbar-social"><a href="https://twitter.com/" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a></li>
+                <li class="nav navbar-nav navbar-social"><a href="https://www.reddit.com/" class="btn btn-social-icon btn-reddit"><i class="fa fa-reddit"></i></a></li>
+                <li class="nav navbar-nav navbar-social"><a href="https://instagram.com/" class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></a></li>
               <!--<li class="dropdown">
                 <a href="http://getbootstrap.com/examples/theme/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -68,10 +69,10 @@
           <div class="col-sm-5">
             <div class="form-group">
               <label for="email" style="color:white;display:inline-block;">Email:</label>
-              <input style="display:inline-block;width:70%;" type="email" class="form-control" id="email" placeholder="Enter email">
+              <input style="display:inline-block;width:70%;" type="email" class="form-control" id="email" onblur="checkEmail()" placeholder="Enter email">
             </div>
             <div class="checkbox" style="margin:auto">
-              <label style="color:white;"><input type="checkbox"> Remember me</label>
+              <label style="color:white;"><input type="checkbox" id="loginCheckbox"> Remember me</label>
             </div>
           </div>
           <div class="col-sm-6">
@@ -82,7 +83,7 @@
             <a style="color:white;margin:auto;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><u>forgot your password?</u></a>
           </div>
           <div class="col-sm-1">
-            <button type="button" class="btn btn-custom btn-xs" id="submit">Submit</button>
+            <button type="button" class="btn btn-custom btn-xs" id="submit" onclick="loginSubmit()">Submit</button>
           </div>
       </div>
     </div>
@@ -144,10 +145,23 @@
 
       </div>
 
-      <hr class="featurette-divider" style="width:80%;">
+      <hr class="featurette-divider" style="width:80%;bordercolor:#185E99">
 
       <div id="explore">
-
+        <h1 style="align;color:black;">What is Brogress?</h1>
+        <div class="container" style="padding-top:30px;">
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" style="width:25%">
+              50% Fact
+            </div>
+            <div class="progress-bar progress-bar-warning" role="progressbar" style="width:25%">
+              50% Magic
+            </div>
+            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:50%">
+              100% results
+            </div>
+          </div>
+        </div>
       </div>
 
       <hr class="featurette-divider" style="width:80%;">
@@ -176,6 +190,7 @@
           </div>
         </div>
       </div>
+
     </div>
     <script src="JS/bootstrap.min.js"></script>
   </body>

@@ -1,10 +1,106 @@
 <html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+  function calcBrodex() {
+    var varsSet = 0;
+
+    var gender = $('input[name="gender"]:checked').val();
+
+    if ($('input[name=weight]').val() <= 0) {
+      alert("Invalid weight");
+      $('[name="weight"]').val('');
+    } else {
+      var weight;
+      if ($('input[name="weightUnits"]:checked').val() == "pounds") {
+        weight = $('[name="weight"]').val() * 2.20462;
+      } else {
+        weight = $('[name="weight"]').val();
+      }
+      varsSet++;
+    }
+
+    if ($('input[name=height]').val() <= 0) {
+      alert("Invalid height");
+      $('[name="height"]').val('');
+    } else {
+      var height;
+      if ($('input[name="heightUnits"]:checked').val() == "inches") {
+        height = $('[name="height"]').val() * 0.393701;
+      } else {
+        height = $('[name="height"]').val();
+      }
+      varsSet++;
+    }
+
+    if ($('[name="bodyfat"]').val() >= 100 || $('[name="bodyfat"]').val() <= 0) {
+      alert("Invalid body fat content");
+      $('[name="bodyfat"]').val('');
+    } else {
+      var bodyfat = $('[name="bodyfat"]').val();
+      varsSet++;
+    }
+
+    if (varsSet == 3) {
+      var brodex = Math.round((((weight*((100-bodyfat)/100))/height)*100)*10)/10;
+      $('#result').css('display','block');
+      $('#result1').text('Your brodex is ' + brodex);
+      var relativeResult;
+      var resultDirection
+        if (gender == "male") {
+          if (brodex < 38.6) {
+            relativeResult = Math.round(10*(100*(38.6-brodex)/38.6))/10;
+            resultDirection = relativeResult + "% less than";
+          } else if (brodex == 38.6) {
+            resultDirection = "the same as";
+          } else {
+            relativeResult = Math.round(10*(100*(brodex-38.6)/38.6))/10;
+            resultDirection = relativeResult + "% more than";
+          }
+        } else {
+          if (brodex < 31.6) {
+            relativeResult = Math.round(10*(100*(31.6-brodex)/31.6))/10;
+            resultDirection = relativeResult + "% less than";
+          } else if (brodex == 31.6) {
+            resultDirection = "the same as";
+          } else {
+            relativeResult = Math.round(10*(100*(brodex-31.6)/31.6))/10;
+            resultDirection = relativeResult + "% more than";
+          }
+        }
+      $('#result2').text("That's " + resultDirection + " the average adult " + gender + "");
+    }
+  }
+  </script>
 
 </head>
 
 <body>
   <h1>Ryan's page</h1>
   <a href="brogress/brogress.html">brogress</a>
+  <a href="brogress2/brogress2.html">brogress 2</a>
+
+  <div style="margin-top:50px; background-color:#AAA; border-style:solid; display:inline-block;">
+    <h1>Brodex calculator</h1>
+    <form action="">
+      <p style="display:inline-block;">
+        I am:
+      </p>
+      <input type="radio" name="gender" value="male" checked>Male
+      <input type="radio" name="gender" value="female">Female<br>
+      <input type="number" name="weight" placeholder="Weight" style="width:60px;">
+      <input type="radio" name="weightUnits" value="kilograms" checked>kilos
+      <input type="radio" name="weightUnits" value="pounds">pounds<br>
+      <input type="number" name="height" placeholder="Height" style="width:60px;">
+      <input type="radio" name="heightUnits" value="centimeters" checked>centimeters
+      <input type="radio" name="weightUnits" value="inches">inches<br>
+      <input type="number" name="bodyfat" placeholder="Body fat %" style="width:100px;"><br>
+      <input type="button" value="Submit" onclick="calcBrodex();">
+    </form>
+    <div id="result" style="display:none;">
+      <p id="result1"></p>
+      <p id="result2"></p>
+    </div>
+  </div>
 </body>
 </html>

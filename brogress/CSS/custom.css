@@ -90,3 +90,13 @@ body {
 .form-signup {
   padding-top: 10px;
 }
+.circle1 {
+  z-index: 1;
+    stroke-dasharray: 322;
+    stroke-dashoffset: 322;
+    -webkit-transition: all 3s;
+            transition: all 3s;
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+}
